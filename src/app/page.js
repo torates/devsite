@@ -1,95 +1,75 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import xlogo from '../../public/x.png'
+import icplogo from '../../public/icp.png'
+import suilogo from '../../public/sui.png'
+import gitlogo from '../../public/github.svg'
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+        <h1>
+          Andres Mateo
+        </h1>
+        <h3>
+          Smart Contract Developer
+        </h3>
+      </div>
+
+      <div className={styles.content}>
+        <h2 className={styles.li}>Work experience:</h2>
+        <ul className={styles.ul} >
+          <div className={styles.textlogo}>
+          <h2>Sui</h2>
+                  <Image
+              src={suilogo}
+              alt="Sui Logo"
+              className={styles.innerlogo}
             />
-          </a>
-        </div>
-      </div>
+          </div>
 
-      <div className={styles.center}>
+          <li className={styles.li} >IN PROGRESS: Competing in the Walrus Devnet Hackathon: Breaking the Ice!</li>
+
+
+          <div className={styles.textlogo}>
+          <h3>Internet Computer</h3>
+                  <Image
+              src={icplogo}
+              alt="Icp Logo"
+              className={styles.innerlogo}
+            />
+          </div>
+          <li className={styles.li}>One of the first Motoko full stack developers in the ecosystem</li>
+          <li className={styles.li}>Previous Motoko Developer in Finny, a crypto lending protocol that raised over 1.5M from investors including Polychain Capital</li>
+          <li className={styles.li}>Collaborated and Helped in the Motoko Bootcamp initiative 2023</li>
+
+        </ul>
+
+        <h2 className={styles.li}>About me:</h2>
+        <p className={styles.li}>22 year old developer, currently focusing on Bitcoin and Sui, interested in decentralization, DeFi and Cryptography. In love with nature and internet culture.</p>
+        <h2 className={styles.li}>Skills:</h2>
+        <p className={styles.li}>Python, Move, Motoko, Rust, C# - React, Svelte</p>
+
+        <h2 className={styles.li}>Feel free to reach out or check any of my projects down below 👇</h2>
+      </div>
+      <div className={styles.socials}>
+      <a href="https://github.com/torates" target="_blank">
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+              src={gitlogo}
+              alt="Github  Logo"
+              className={styles.logo}
+            />
+      </a>
+      <a href="https://x.com/woolycrypto" target="_blank">
+        <Image
+              src={xlogo}
+              alt="X Logo"
+              className={styles.logo}
+            />
+      </a>
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   );
 }
